@@ -350,6 +350,52 @@ html {
     animation: gradient 3s ease infinite;
 }
 
+/* Modal Animation */
+.modal-enter {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-content-enter {
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.9) translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Menu Card Click Animation */
+.menu-card-click {
+    animation: cardClick 0.2s ease-out;
+}
+
+@keyframes cardClick {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* Mobile Touch Optimizations */
 @media (max-width: 768px) {
     .btn-animate {
